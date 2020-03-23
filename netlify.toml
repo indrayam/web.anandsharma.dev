@@ -1,0 +1,18 @@
+# Settings in the [build] context are global and are applied to all contexts
+# unless otherwise overridden by more specific contexts.
+[build]
+  # Directory to change to before starting a build.
+  # This is where we will look for package.json/.nvmrc/etc.
+  base = "."
+
+# Production context: all deploys from the Production branch set in your site's
+# deploy contexts will inherit these settings.
+[context.production]
+  publish = "."
+  command = "echo 'Basic Version in Production'"
+
+# Branch Deploy context: all deploys that are not from a pull/merge request or
+# from the Production branch will inherit these settings.
+[context.branch-deploy]
+  publish = "."
+  command = "echo 'Basic Version'"
