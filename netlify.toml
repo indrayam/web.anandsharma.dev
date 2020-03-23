@@ -9,10 +9,10 @@
 # deploy contexts will inherit these settings.
 [context.production]
   publish = "."
-  command = "echo 'Basic Version in Production'"
+  command = "echo 'Web Version in Production'"
 
 # Branch Deploy context: all deploys that are not from a pull/merge request or
 # from the Production branch will inherit these settings.
 [context.branch-deploy]
   publish = "."
-  command = "echo 'Basic Version'"
+  command = "echo 'Web Version'"
